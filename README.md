@@ -4,7 +4,7 @@
 
 This library allows you to embed and control your VOD and Live Stream player on your Android application.
 
-# Usage
+## Usage
 
 See docs/ for detailed instructions.
 
