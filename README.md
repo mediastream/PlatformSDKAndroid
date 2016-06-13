@@ -10,4 +10,4 @@ See docs/ for detailed instructions.
 
 ## License
 
-This library is available under the MIT license. See the LICENSE file for more info.
+This library is available under the MIT license.
