@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:1.0.0'
+    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:1.1.0'
 }
 ```
 
