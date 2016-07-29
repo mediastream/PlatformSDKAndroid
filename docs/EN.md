@@ -50,7 +50,6 @@ public class MainActivity extends Activity {
 
         String id = "56e822b07a741a6c08a9aabb";
         MediastreamPlayerConfig config = new MediastreamPlayerConfig(id, MediastreamPlayerConfig.PlayerType.VOD);
-        config.environment = (MediastreamPlayerConfig.Environment.QA);
 
         player = new MediastreamPlayer(this, playerContainer);
         player.configure(config);
