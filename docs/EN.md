@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 
         FrameLayout playerContainer = (FrameLayout) view.findViewById(R.id.video_frame);
 
-        String id = "56e822b07a741a6c08a9aabb";
+        String id = "567317b15050c6e76e896864";
         MediastreamPlayerConfig config = new MediastreamPlayerConfig(id, MediastreamPlayerConfig.PlayerType.VOD);
 
         player = new MediastreamPlayer(this, playerContainer);
