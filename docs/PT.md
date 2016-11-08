@@ -13,7 +13,7 @@ Primeiro é necessário incluir a biblioteca nas dependências de seu projeto. V
 ```
 dependencies {
     ...
-    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:1.1.0'
+    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:1.2.0'
 }
 ```
 
@@ -48,9 +48,10 @@ public class MainActivity extends Activity {
 
         FrameLayout playerContainer = (FrameLayout) view.findViewById(R.id.video_frame);
 
-        String id = "56e822b07a741a6c08a9aabb";
-        MediastreamPlayerConfig config = new MediastreamPlayerConfig(id, MediastreamPlayerConfig.PlayerType.VOD);
-        config.environment = (MediastreamPlayerConfig.Environment.QA);
+        String id = "57347e141ebc7caf3678f406";
+        String accountID = "57330da6811307aa03fe6a65";
+        MediastreamPlayerConfig config = new MediastreamPlayerConfig(id, MediastreamPlayerConfig.PlayerType.VOD, accountID);
+        config.environment = (MediastreamPlayerConfig.Environment.PRODUCTION);
 
         player = new MediastreamPlayer(this, playerContainer);
         player.configure(config);
