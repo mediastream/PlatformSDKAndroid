@@ -13,7 +13,7 @@ Primeiro é necessário incluir a biblioteca nas dependências de seu projeto. V
 ```
 dependencies {
     ...
-    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:1.2.0'
+    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.1'
 }
 ```
 
@@ -86,6 +86,8 @@ Essa classe possui as configurações do MediastreamPlayer.
 | adUrl | String | Não | AdURL (ex: VAST). Opcional, se não especificado serão utilizadas as opções configuradas na Plataforma Mediastream. |
 | accessToken | String | Não | Access token para vídeos restritos. |
 | autoplay | boolean | Não | Inicia reprodução do vídeo automaticamente se for true. Default: false |
+| drmData | DrmData | No | DRM suporte, url e cabeçalho. Default: null |
+| videoType | VideoType | No | Tipo de vídeo (ex: DASH). Pode usar `DASH`, `HLS`, `MP4`, `OTHERS`. Default: `DASH` |
 
 ### Métodos
 
@@ -124,6 +126,12 @@ Mediastream player para Live ou VOD da Plataforma Mediastream.
 ### Construtores
 
 MediastreamPlayer(Activity activity, FrameLayout container)
+
+## Classe DrmData
+Classe para definir valores de configuração do drm, como tokens e urls.
+
+### Constructores
+DrmData(String drmUrl, Map<String, String> drmHeaders)
 
 ## Interface MediastreamPlayerCallback
 

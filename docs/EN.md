@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:1.2.0'
+    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.1'
 }
 ```
 
@@ -86,6 +86,8 @@ Mediastream Player configuration.
 | adUrl | String | No | AdURL (e.g. VAST). Optional, if not specified will play ads configured in Mediastream Platform. |
 | accessToken | String | No | Access token for restricted videos. |
 | autoplay | boolean | No | Autoplay video if true. Default: false |
+| drmData | DrmData | No | DRM support, url and headers. Default: null |
+| videoType | VideoType | No | Type of video (e.g. DASH). Can use `DASH`, `HLS`, `MP4`, `OTHERS`. Default: `DASH` |
 
 ### Methods
 
@@ -124,6 +126,12 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 ### Constructors
 
 MediastreamPlayer(Activity activity, FrameLayout container)
+
+## Class DrmData
+Class to set drm config values, like tokens and urls.
+
+### Constructors
+DrmData(String drmUrl, Map<String, String> drmHeaders)
 
 ## Interface MediastreamPlayerCallback
 
