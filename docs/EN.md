@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.1'
+    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.2'
 }
 ```
 
@@ -118,6 +118,7 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | void | isReady() | Returns if the player is ready or not. |
 | void | isPlaying() | Returns if the player is playing or not. |
 | void | getCurrentPosition() | Return the current position of the video. |
+| void | seekTo(int newPosition) | Seeks to a position specified in milliseconds in the current video. |
 | void | addActionButton(Drawable icon, java.lang.String contentDescription, View.OnClickListener onClickListener) | Creates a button to put in the top right of the video player. |
 | void | setChromeColor(int color) | Sets the color of the top chrome, bottom chrome, and background. |
 | void | setLogoImage(Drawable logo) | Set the logo with appears in the left of the top chrome. |

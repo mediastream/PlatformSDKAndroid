@@ -13,7 +13,7 @@ Primeiro é necessário incluir a biblioteca nas dependências de seu projeto. V
 ```
 dependencies {
     ...
-    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.1'
+    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.2'
 }
 ```
 
@@ -118,6 +118,7 @@ Mediastream player para Live ou VOD da Plataforma Mediastream.
 | void | isReady() | Indica se o player está pronto ou não. |
 | void | isPlaying() | Indica se o player está reproduzindo ou não. |
 | void | getCurrentPosition() | Indica a posição atual (tempo) da reprodução do vídeo. |
+| void | seekTo(int newPosition) | Avança até posição especificada vídeo. O valor de avanço é definido em milissegundos. |
 | void | addActionButton(Drawable icon, java.lang.String contentDescription, View.OnClickListener onClickListener) | Cria um botão no topo direito do player. |
 | void | setChromeColor(int color) | Muda a cor de fundo da faixa superior (onde o título é exibido) e do fundo da faixa inferior (controles do vídeo). |
 | void | setLogoImage(Drawable logo) | Logo que aparecerá no topo esquerdo. |
