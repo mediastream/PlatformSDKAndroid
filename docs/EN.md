@@ -26,6 +26,13 @@ AndroidManifest.xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
+Add "android:configChanges" to activity label with:
+```xml
+<activity ...
+  android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize">
+</activity>
+```
+
 After doing this, you can start with this basic example of usage:
 
 ```java

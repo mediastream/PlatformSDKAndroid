@@ -26,6 +26,13 @@ AndroidManifest.xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
+Adicione "android: configChanges" ao rótulo de atividade com:
+```xml
+<activity ...
+  android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize">
+</activity>
+```
+
 Com isso você pode começar a usar a biblioteca, veja o exemplo abaixo:
 
 ```java
