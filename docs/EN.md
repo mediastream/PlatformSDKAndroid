@@ -95,6 +95,7 @@ Mediastream Player configuration.
 | autoplay | boolean | No | Autoplay video if true. Default: false |
 | drmData | DrmData | No | DRM support, url and headers. Default: null |
 | videoType | VideoType | No | Type of video (e.g. DASH). Can use `DASH`, `HLS`, `MP4`, `OTHERS`. Default: `DASH` |
+| customerID | Customer ID | No | Unique Identification string for the video consumer customer  |
 
 ### Methods
 
