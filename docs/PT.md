@@ -13,7 +13,7 @@ Primeiro é necessário incluir a biblioteca nas dependências de seu projeto. V
 ```
 dependencies {
     ...
-    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.2'
+    compile 'am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:2.0.3'
 }
 ```
 
