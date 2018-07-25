@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:4.0.0"
+    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:4.0.1"
     implementation "com.google.android.exoplayer:exoplayer:2.8.1"
     implementation "com.google.android.exoplayer:extension-ima:2.8.1"
     implementation "com.google.android.exoplayer:exoplayer-ui:2.8.1"
@@ -142,6 +142,7 @@ Mediastream Player configuration.
 | showControls | boolean | No | Hide the controls of the player. Default: true |
 | loop | boolean | No | Loop the current item. Default: false |
 | referer | string | No | Allows set a custom referrer to find in the statistics. |
+| src | string | No | Arbitrary source to reproduce. |
 
 ### Methods
 
