@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:4.0.2"
+    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:4.0.3"
     implementation "com.google.android.exoplayer:exoplayer:2.8.1"
     implementation "com.google.android.exoplayer:extension-ima:2.8.1"
     implementation "com.google.android.exoplayer:exoplayer-ui:2.8.1"
@@ -173,6 +173,7 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | void | exitFullscreen | Out to fullscreen mode |
 | void | backward(Long time) | Seek to time established |
 | void | forward(Long time) | Seek to time established |
+| void | ShowSelectorPopup(Int type) | Show a selector for video qualities if type is 0, audio if type is 1, and subtitles if type is 2 |
 
 ### Constructors
 
