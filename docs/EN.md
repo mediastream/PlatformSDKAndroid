@@ -165,6 +165,7 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | void | exitFullscreen | Out to fullscreen mode |
 | void | backward(Long time) | Seek to time established |
 | void | forward(Long time) | Seek to time established |
+| void | reloadPlayer(MediastreamPlayerConfig) | Allows to reload the player with a new content without kill the player instance |
 | void | ShowSelectorPopup(Int type) | Show a selector for video qualities if type is 0, audio if type is 1, and subtitles if type is 2 |
 
 ### Constructors
