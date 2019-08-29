@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,6 @@
     android:background="#00000000"
     tools:context=".MediastreamPlayer"
     android:keepScreenOn="true">
-
     <LinearLayout
         android:id="@+id/root"
         android:layout_width="match_parent"
@@ -26,17 +26,43 @@
             android:visibility="visible"
             android:paddingRight="50dp"
             android:background="#96000000">
+            <ImageButton
+                android:id="@+id/ic_dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_weight="0"
+                android:src="@drawable/ic_dismiss"
+                android:visibility="visible"
+                android:cropToPadding="false"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="10dp"
+                android:alpha="1"/>
+            <ImageButton
+                android:id="@+id/ic_live_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_weight="0"
+                android:src="@drawable/ic_live"
+                android:visibility="gone"
+                android:cropToPadding="false"
+                android:layout_marginRight="18dp"
+                android:alpha="1"/>
+
             <TextView
                 android:id="@+id/txt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Video Title"
-                android:gravity="center|left"
                 android:layout_weight="1"
-                android:textColor="#FFF"
+                android:gravity="center|left"
                 android:paddingLeft="10dp"
-                android:textSize="20dp"/>
+                android:text="Video Title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFF"
+                android:textSize="20dp" />
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
                 android:id="@+id/cast_container"
@@ -114,13 +140,24 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="18dp">
                             <ImageButton
+                                android:id="@+id/prev_btn"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_previous"
+                                android:cropToPadding="false"
+                                android:visibility="gone"
+                                android:layout_marginRight="18dp"/>
+                            <ImageButton
                                 android:id="@+id/exo_play"
                                 android:layout_width="32dp"
                                 android:layout_height="32dp"
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_play_download"
+                                android:src="@drawable/ic_play_download"
                                 android:cropToPadding="false"
                                 android:visibility="visible"
                                 android:layout_marginRight="18dp"/>
@@ -131,7 +168,18 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_pause"
+                                android:src="@drawable/ic_pause"
+                                android:cropToPadding="false"
+                                android:visibility="gone"
+                                android:layout_marginRight="18dp"/>
+                            <ImageButton
+                                android:id="@+id/next_btn"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_next"
                                 android:cropToPadding="false"
                                 android:visibility="gone"
                                 android:layout_marginRight="18dp"/>
@@ -142,7 +190,7 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_back_10"
+                                android:src="@drawable/ic_backward_10"
                                 android:cropToPadding="false"
                                 android:visibility="visible"
                                 android:layout_marginRight="18dp"/>
@@ -153,7 +201,7 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_sound_on"
+                                android:src="@drawable/ic_sound_on"
                                 android:cropToPadding="false"
                                 android:visibility="visible"
                                 android:layout_marginRight="18dp"/>
@@ -164,7 +212,7 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_sound_off"
+                                android:src="@drawable/ic_sound_off"
                                 android:cropToPadding="false"
                                 android:visibility="gone"
                                 android:layout_marginRight="18dp"/>
@@ -184,7 +232,7 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_cc"
+                                android:src="@drawable/ic_cc"
                                 android:cropToPadding="false"
                                 android:visibility="gone"
                                 android:layout_marginRight="18dp"/>
@@ -195,7 +243,7 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_settings"
+                                android:src="@drawable/ic_settings"
                                 android:cropToPadding="false"
                                 android:visibility="visible"
                                 android:layout_marginRight="18dp"/>
@@ -206,7 +254,7 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_fullscreen_on"
+                                android:src="@drawable/ic_fullscreen_on"
                                 android:cropToPadding="false"
                                 android:visibility="visible"
                                 android:layout_marginRight="18dp"/>
@@ -217,7 +265,7 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="1"
-                                android:src="@drawable/hplib_ic_fullscreen_off"
+                                android:src="@drawable/ic_fullscreen_off"
                                 android:cropToPadding="false"
                                 android:visibility="gone"
                                 android:layout_marginRight="18dp"/>
@@ -228,11 +276,21 @@
                                 android:layout_gravity="center"
                                 android:background="@null"
                                 android:layout_weight="0"
-                                android:src="@drawable/hplib_ic_live"
+                                android:src="@drawable/ic_live"
                                 android:visibility="gone"
                                 android:cropToPadding="false"
                                 android:layout_marginRight="18dp"
                                 android:alpha="1"/>
+                            <ImageView
+                                android:id="@+id/logo_control_bar"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:layout_weight="0"
+                                android:cropToPadding="false"
+                                android:visibility="gone"
+                                android:layout_marginRight="18dp"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -253,4 +311,5 @@
             android:startColor="#fff"
             android:indeterminate="true"/>
     </RelativeLayout>
+
 </RelativeLayout>
