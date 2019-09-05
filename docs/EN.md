@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:6.0.0"
+    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:6.0.4"
     implementation "com.google.android.exoplayer:exoplayer:2.9.6"
     implementation "com.google.android.exoplayer:extension-ima:2.9.6"
     implementation "com.google.android.exoplayer:exoplayer-ui:2.9.6"
@@ -167,6 +167,8 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | void | forward(Long time) | Seek to time established |
 | void | reloadPlayer(MediastreamPlayerConfig) | Allows to reload the player with a new content without kill the player instance |
 | void | ShowSelectorPopup(Int type) | Show a selector for video qualities if type is 0, audio if type is 1, and subtitles if type is 2 |
+| string | getMediaTitle() | Returns the title of the media, if it does not exist, it will return an empty string. |
+| string | getMediaPoster() | Returns a url poster of the media, if it does not exist, it will return an empty string. |
 
 ### Constructors
 
