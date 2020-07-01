@@ -97,6 +97,9 @@ public class VODPlayer extends AppCompatActivity {
         config.id = "5d543e1b4fd7920fbadb1b35";
         config.type = MediastreamPlayerConfig.VideoTypes.VOD;
         config.trackEnable = false;
+        String[] drmHeaders = new String[]{"X-AxDRM-Message",   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiMjdGNkNDMTEtODRGMS00MzFELTk5MDItQTZDODAwRUM4NzBCIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImV4cGlyYXRpb25fZGF0ZSI6IjIwMjAtMDMtMDNUMTg6NTM6MjcuMzA2WiIsImtleXMiOlt7ImlkIjoiRUNFQjhEQ0MtMEI1RS00RUExLTkxRkMtNDJDMzJFNEQzMjVEIn1dfX0.9vDzNNjPiM9mi9ajDbXklP5Gbea8a65sfn-JxSV7KLY"};
+        config.drmData = new MediastreamPlayerConfig.DrmData("https://drm-widevine-licensing.axtest.net/AcquireLicense", drmHeaders);        
+
         playerView = findViewById(R.id.player_view);
         container = findViewById(R.id.main_media_frame);
         player = new MediastreamPlayer(this, config, container, playerView);
