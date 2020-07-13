@@ -229,3 +229,7 @@ Interface for implementing the player callbacks.
 `LIVE`, `VOD`, `EPISODE`
 
 See JavaDoc in docs/javadoc/ for further information.
+
+### Examples
+Check this repository to see some SDK examples. 
+https://github.com/cruiz666/MediastreamPlatformSDKAndroidSamples
