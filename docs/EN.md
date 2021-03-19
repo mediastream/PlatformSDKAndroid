@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:6.0.27"
+    implementation "am.mediastre.mediastreamplatformsdk:mediastreamplatformsdkandroid:6.0.28"
     implementation "com.google.android.exoplayer:exoplayer:2.9.6"
     implementation "com.google.android.exoplayer:extension-ima:2.9.6"
     implementation "com.google.android.exoplayer:exoplayer-ui:2.9.6"
