@@ -138,6 +138,7 @@ Mediastream Player configuration.
 | referer | string | No | Allows set a custom referrer to find in the statistics. |
 | src | string | No | Arbitrary source to reproduce. |
 | loadNextAutomatically | boolean | No | Allows play next episode if exists. Available only when EPISODE type is setted. |
+| appName | string | No | Very useful to identify traffic in platform analytics. |
 
 ### Methods
 
