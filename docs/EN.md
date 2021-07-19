@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:6.1.0'
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:6.1.1'
 }
 ```
 
