@@ -13,12 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:6.0.31'
-    implementation "com.google.android.exoplayer:exoplayer:2.9.6"
-    implementation "com.google.android.exoplayer:extension-ima:2.9.6"
-    implementation "com.google.android.exoplayer:exoplayer-ui:2.9.6"
-    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:6.1.0'
 }
 ```
 
