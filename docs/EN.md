@@ -134,6 +134,7 @@ Mediastream Player configuration.
 | src | string | No | Arbitrary source to reproduce. |
 | loadNextAutomatically | boolean | No | Allows play next episode if exists. Available only when EPISODE type is setted. |
 | appName | string | No | Very useful to identify traffic in platform analytics. |
+| youboraExtraParams | String[20] | No | Allows send youbora extraparams. The limit is 20 items, the index is equivalent in youbora to the index plus one. Example: youboraExtraParams[0] is equivalent to CustomDimension1 |
 
 ### Methods
 
