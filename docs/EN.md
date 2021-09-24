@@ -135,6 +135,7 @@ Mediastream Player configuration.
 | loadNextAutomatically | boolean | No | Allows play next episode if exists. Available only when EPISODE type is setted. |
 | appName | string | No | Very useful to identify traffic in platform analytics. |
 | youboraExtraParams | String[20] | No | Allows send youbora extraparams. The limit is 20 items, the index is equivalent in youbora to the index plus one. Example: youboraExtraParams[0] is equivalent to CustomDimension1 |
+| automaticallyReconect | boolean | No | Allows try to reconnect when network is lost. Default: true |
 
 ### Methods
 
@@ -169,6 +170,7 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | void | ShowSelectorPopup(Int type) | Show a selector for video qualities if type is 0, audio if type is 1, and subtitles if type is 2 |
 | string | getMediaTitle() | Returns the title of the media, if it does not exist, it will return an empty string. |
 | string | getMediaPoster() | Returns a url poster of the media, if it does not exist, it will return an empty string. |
+| void | RetryNetworkConnection() | Try to reconnect player to network manually. |
 
 ### Constructors
 
@@ -213,6 +215,7 @@ Interface for implementing the player callbacks.
 | void | onAdEnded() | Called when Ad finish. |
 | void | onAdError() | Called when Ad failed. |
 | void | onPlaybackErrors(JsonObject error) | Called when a playback error occurs. |
+| void | onEmbedErrors(JsonObject error) | Called when a embed error occurs. |
 
 ## Enum MediastreamPlayerConfig.Environment
 
