@@ -17,6 +17,51 @@ dependencies {
 }
 ```
 
+Remember enaled multidex feature on your android default config:
+
+```
+android {
+    ...
+    defaultConfig {
+        ...
+        multiDexEnabled true
+    }
+}
+```
+
+If you present issues related META-INF try to add this on your packaging options:
+
+```
+android {
+    ...
+    android {
+        packagingOptions {
+            exclude 'META-INF/DEPENDENCIES'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/license.txt'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/ASL2.0'
+            exclude("META-INF/*.kotlin_module")        
+        }
+    }
+}
+```
+
+In order to support youbora feature please add this dependency on you main build.gradle file:
+
+```
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://npaw.jfrog.io/artifactory/youbora/" }
+    }
+}
+```
+
 Make sure to give your application permission for internet and access network state:
 
 ```xml
