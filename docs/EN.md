@@ -33,6 +33,13 @@ Add "android:configChanges" to activity label with:
 </activity>
 ```
 
+Add receiver and service tags:
+
+```xml
+<receiver android:name="am.mediastre.mediastreamplatformsdkandroid.MediastreamActionService"/>
+<service android:name="am.mediastre.mediastreamplatformsdkandroid.MediastreamPlayerService" />
+```
+
 Remember that you need a instance of Exoplayer view in your activity layout, for example:
 
 ```xml
@@ -61,8 +68,6 @@ Remember that you need a instance of Exoplayer view in your activity layout, for
 </LinearLayout>
 ```
 
-Additionally you need to add the exo_playback_control_view.xml file that you can find in the sources folder and then add this to your layouts folder in your project.
-
 After doing this, you can start with this basic example of usage:
 
 ```java
@@ -80,7 +85,6 @@ import am.mediastre.mediastreamplatformsdkandroid.MediastreamPlayerConfig;
 public class VODPlayer extends AppCompatActivity {
     private String TAG = "SampleApp";
     private FrameLayout container;
-    private PlayerView playerView;
     private MediastreamPlayer player;
 
     @Override
@@ -91,13 +95,12 @@ public class VODPlayer extends AppCompatActivity {
         MediastreamPlayerConfig config = new MediastreamPlayerConfig();
         config.id = "5d543e1b4fd7920fbadb1b35";
         config.type = MediastreamPlayerConfig.VideoTypes.VOD;
-        config.trackEnable = false;
-        String[] drmHeaders = new String[]{"X-AxDRM-Message",   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiMjdGNkNDMTEtODRGMS00MzFELTk5MDItQTZDODAwRUM4NzBCIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImV4cGlyYXRpb25fZGF0ZSI6IjIwMjAtMDMtMDNUMTg6NTM6MjcuMzA2WiIsImtleXMiOlt7ImlkIjoiRUNFQjhEQ0MtMEI1RS00RUExLTkxRkMtNDJDMzJFNEQzMjVEIn1dfX0.9vDzNNjPiM9mi9ajDbXklP5Gbea8a65sfn-JxSV7KLY"};
-        config.drmData = new MediastreamPlayerConfig.DrmData("https://drm-widevine-licensing.axtest.net/AcquireLicense", drmHeaders);        
+        //If you need support for DRM uncomment next lines
+        /*String[] drmHeaders = new String[]{"X-AxDRM-Message",   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiMjdGNkNDMTEtODRGMS00MzFELTk5MDItQTZDODAwRUM4NzBCIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImV4cGlyYXRpb25fZGF0ZSI6IjIwMjAtMDMtMDNUMTg6NTM6MjcuMzA2WiIsImtleXMiOlt7ImlkIjoiRUNFQjhEQ0MtMEI1RS00RUExLTkxRkMtNDJDMzJFNEQzMjVEIn1dfX0.9vDzNNjPiM9mi9ajDbXklP5Gbea8a65sfn-JxSV7KLY"};
+        config.drmData = new MediastreamPlayerConfig.DrmData("https://drm-widevine-licensing.axtest.net/AcquireLicense", drmHeaders);*/
 
-        playerView = findViewById(R.id.player_view);
         container = findViewById(R.id.main_media_frame);
-        player = new MediastreamPlayer(this, config, container, playerView);
+        player = new MediastreamPlayer(this, config, container);
     }
 
     @Override
@@ -130,9 +133,16 @@ Mediastream Player configuration.
 | dvr | boolean | No | Player starts prepared to use dvr, to use you need to set a windowDRV. Default: false |
 | windowDVR | int | No | Window dvr voiced in seconds.|
 | showControls | boolean | No | Hide the controls of the player. Default: true |
+| AdPreloadTimeoutMs | Long | No | Allows to change the default duration in milliseconds for which the player must buffer while preloading an ad group before that ad group is skipped and marked as having failed to load. Default: 10000ms |
 | referer | string | No | Allows set a custom referrer to find in the statistics. |
 | src | string | No | Arbitrary source to reproduce. |
 | loadNextAutomatically | boolean | No | Allows play next episode if exists. Available only when EPISODE type is setted. |
+| NotificationColor | Integer | No | Allows to change Notification background color when uses player as service. |
+| NotificationImageUrl | String | No | Allows to change Notification image when uses player as service. |
+| NotificationDescription | String | No | Allows to change Notification description when uses player as service. |
+| NotificationSongName | String | No | Allows to change Notification song name when uses player as service. |
+| NotificationAlbumName | String | No | Allows to change Notification album name when uses player as service. |
+| NotificationIconUrl | String | No | Allows to change Notification icon when uses player as service. |
 | appName | string | No | Very useful to identify traffic in platform analytics. |
 | youboraExtraParams | String[20] | No | Allows send youbora extraparams. The limit is 20 items, the index is equivalent in youbora to the index plus one. Example: youboraExtraParams[0] is equivalent to CustomDimension1 |
 | automaticallyReconect | boolean | No | Allows try to reconnect when network is lost. Default: true |
@@ -183,6 +193,17 @@ private MediastreamPlayer mdstrm;
 mdstrm = MediastreamPlayer(Context context, Activity activity, PlayerView playerView, MediastreamPlayerConfig config, FrameLayout container);
 
 mdstrm.msPlayer //Current exoplayer instance
+```
+
+If you wanna use player as service you needs to create a method to call MediastreamPlayerService that receives a MediastreamPlayer instances, linke that:
+
+```java
+    void startService(MediastreamPlayer player) {
+        MediastreamPlayerService.setupService(player);
+        Intent serviceIntent = new Intent(this, MediastreamPlayerService.class);
+        serviceIntent.setAction(getPackageName()+".action.startforeground");
+        ContextCompat.startForegroundService(this, serviceIntent);
+    }
 ```
 
 ## Class DrmData
