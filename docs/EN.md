@@ -17,7 +17,7 @@ dependencies {
 }
 ```
 
-Remember enaled multidex feature on your android default config:
+Remember enabled multidex feature on your android default config:
 
 ```
 android {
