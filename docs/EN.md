@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.0'
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.1'
 }
 ```
 
@@ -191,6 +191,7 @@ Mediastream Player configuration.
 | appName | string | No | Very useful to identify traffic in platform analytics. |
 | youboraExtraParams | String[20] | No | Allows send youbora extraparams. The limit is 20 items, the index is equivalent in youbora to the index plus one. Example: youboraExtraParams[0] is equivalent to CustomDimension1 |
 | automaticallyReconect | boolean | No | Allows try to reconnect when network is lost. Default: true |
+| playerId | String | No | Takes player configuration from platform settings | 
 
 ### Methods
 
