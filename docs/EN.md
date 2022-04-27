@@ -209,7 +209,7 @@ Mediastream Player configuration.
 | NotificationSongName | String | No | Allows to change Notification song name when uses player as service. |
 | NotificationAlbumName | String | No | Allows to change Notification album name when uses player as service. |
 | NotificationIconUrl | String | No | Allows to change Notification icon when uses player as service. |
-| appName | string | No | Very useful to identify traffic in platform analytics. |
+| appName | string | No | Very useful to identify traffic in platform analytics. Example: "mediastream-app-tv" or "mediastream-app-mobile"|
 | youboraExtraParams | String[20] | No | Allows send youbora extraparams. The limit is 20 items, the index is equivalent in youbora to the index plus one. Example: youboraExtraParams[0] is equivalent to CustomDimension1 |
 | automaticallyReconect | boolean | No | Allows try to reconnect when network is lost. Default: true |
 | playerId | String | No | Takes player configuration from platform settings | 
