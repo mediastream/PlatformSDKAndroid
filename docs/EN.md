@@ -161,7 +161,12 @@ public class VODPlayer extends AppCompatActivity {
         config.drmData = new MediastreamPlayerConfig.DrmData("https://drm-widevine-licensing.axtest.net/AcquireLicense", drmHeaders);*/
 
         container = findViewById(R.id.main_media_frame);
+        //For Android Mobile Apps
         player = new MediastreamPlayer(this, config, container);
+        
+        //For Android TV Apps
+        /*PlayerView playerView = findViewById(R.id.player_view);
+        player = new MediastreamPlayer(this, config, container, playerView);*/
     }
 
     @Override
