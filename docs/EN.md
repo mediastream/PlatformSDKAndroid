@@ -10,10 +10,26 @@ This library allows you to embed and control your VOD and Live Stream player on 
 
 First you need to add the library in your dependencies. You can do that by adding the following in the build.gradle of your application:
 
+### For android mobile apps
+
 ```
 dependencies {
     ...
     implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.8'
+}
+```
+
+### For android tv apps
+
+```
+dependencies {
+    ...
+    implementation "com.google.android.exoplayer:exoplayer:2.9.6"
+    implementation "com.google.android.exoplayer:extension-ima:2.9.6"
+    implementation "com.google.android.exoplayer:extension-cast:2.9.6"
+    implementation "com.google.android.exoplayer:exoplayer-core:2.9.6"
+    implementation 'com.android.volley:volley:1.2.1'    
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:7.0.4'
 }
 ```
 
