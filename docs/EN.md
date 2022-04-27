@@ -322,3 +322,6 @@ See JavaDoc in docs/javadoc/ for further information.
 ### Examples
 Check this repository to see some SDK examples. 
 https://github.com/cruiz666/MediastreamPlatformSDKAndroidSamples
+
+Download this project to check android tv implementation
+https://mediastream-platform-sdk-ios.s3.amazonaws.com/android-tv-sample/TestAndroidTVMediastream.zip
