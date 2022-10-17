@@ -15,7 +15,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.9'
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.12'
 }
 ```
 
@@ -212,7 +212,10 @@ Mediastream Player configuration.
 | appName | string | No | Very useful to identify traffic in platform analytics. Example: "mediastream-app-tv" or "mediastream-app-mobile"|
 | youboraExtraParams | String[20] | No | Allows send youbora extraparams. The limit is 20 items, the index is equivalent in youbora to the index plus one. Example: youboraExtraParams[0] is equivalent to CustomDimension1 |
 | automaticallyReconect | boolean | No | Allows try to reconnect when network is lost. Default: true |
-| playerId | String | No | Takes player configuration from platform settings | 
+| playerId | String | No | Takes player configuration from platform settings |
+| tryToGetMetadataFromLiveWhenAudio | boolean | No | If your live content containts TPE1 and TIT2 tags on manifest this metadata will be parsed and send on onLiveAudioCurrentSongChanged event. Default: true |
+| fillAutomaticallyAudioNotification | boolean | No | Show the current song is playing on live content audio notification if your live content containts TPE1 and TIT2 tags on manifest. Default: true |
+| millisecondsToWaitForService | Int | No | Time to wait before kill audio service. Default: 2000 |
 
 ### Methods
 
@@ -304,6 +307,7 @@ Interface for implementing the player callbacks.
 | void | onAdError() | Called when Ad failed. |
 | void | onPlaybackErrors(JsonObject error) | Called when a playback error occurs. |
 | void | onEmbedErrors(JsonObject error) | Called when a embed error occurs. |
+| void | onLiveAudioCurrentSongChanged(JsonObject data) | Called when a song changes on audio live content. |
 
 ## Enum MediastreamPlayerConfig.Environment
 
