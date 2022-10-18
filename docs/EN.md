@@ -15,7 +15,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.12'
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.13'
 }
 ```
 
@@ -193,7 +193,7 @@ Mediastream Player configuration.
 | accessToken | String | No | Access token for restricted videos. |
 | autoplay | boolean | No | Autoplay video if true. Default: false |
 | drmData | DrmData | No | DRM support, url and headers. Default: null |
-| videoFormat | MediastreamPlayerConfig.AudioVideoFormat | No | Type of video (e.g. DASH). Can use `DASH`, `MP4`, `M4A`. Default: `HLS` |
+| videoFormat | MediastreamPlayerConfig.AudioVideoFormat | No | Type of video (e.g. DASH). Can use `DASH`, `MP4`, `M4A`, `ICECAST`. Default: `HLS` |
 | customerID | Customer ID | No | Unique Identification string for the video consumer customer  |
 | mute | boolean | No | Player starts muted. Default: false |
 | dvr | boolean | No | Player starts prepared to use dvr, to use you need to set a windowDRV. Default: false |
