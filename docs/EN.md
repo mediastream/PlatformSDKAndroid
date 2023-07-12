@@ -15,7 +15,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.13'
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.17'
 }
 ```
 
@@ -305,6 +305,8 @@ Interface for implementing the player callbacks.
 | void | onAdResume() | Called when Ad is on resume mode. |
 | void | onAdEnded() | Called when Ad finish. |
 | void | onAdError() | Called when Ad failed. |
+| void | onAdSkipped() | Called when Ad Skipped. |
+| void | onAdSkippableStateChanged() | Called when Ad skippable state changed. |
 | void | onPlaybackErrors(JsonObject error) | Called when a playback error occurs. |
 | void | onEmbedErrors(JsonObject error) | Called when a embed error occurs. |
 | void | onLiveAudioCurrentSongChanged(JsonObject data) | Called when a song changes on audio live content. |
