@@ -15,7 +15,7 @@ First you need to add the library in your dependencies. You can do that by addin
 ```
 dependencies {
     ...
-    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.17'
+    implementation 'io.github.mediastream:mediastreamplatformsdkandroid:8.0.18'
 }
 ```
 
