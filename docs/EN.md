@@ -251,6 +251,7 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | string | getMediaTitle() | Returns the title of the media, if it does not exist, it will return an empty string. |
 | string | getMediaPoster() | Returns a url poster of the media, if it does not exist, it will return an empty string. |
 | void | RetryNetworkConnection() | Try to reconnect player to network manually. |
+| void | changeSpeed(Float playbackSpeed) | Allows you to change the content playback speed. |
 
 ### Constructors
 
